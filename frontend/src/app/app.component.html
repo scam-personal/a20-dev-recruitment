@@ -1,0 +1,25 @@
+<!-- Header -->
+<header class="h-16 border-b border-gray-200 bg-white">
+  <div class="container-header">
+    <!-- Logo -->
+    <div class="header-logo">
+      <div>
+        <a [routerLink]="['']" [routerLinkActive]="['active-menu-item']">
+          <img class="h-12" src="../assets/images/logo.png" alt="Logo a2o dev">
+        </a>
+      </div>
+    </div>
+    <!-- End logo -->
+    <!-- Menu -->
+    <nav class="h-16 flex-1 mt-1">
+      <ul class="menu">
+        <li><a [routerLink]="['problem-1']" [routerLinkActive]="['active-menu-item']">Problem 1</a></li>
+        <li><a [routerLink]="['problem-2']" [routerLinkActive]="['active-menu-item']">Problem 2</a></li>
+        <li><a [routerLink]="['problem-3']" [routerLinkActive]="['active-menu-item']">Problem 3</a></li>
+      </ul>
+    </nav>
+    <!-- End menu -->
+  </div>
+</header>
+<!-- End header -->
+<router-outlet></router-outlet>

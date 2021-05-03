@@ -1,0 +1,79 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base{
+    body{
+        @apply text-gray-600 bg-gray-100
+    }
+}
+
+@layer components {
+    .test-responsive{
+        @apply xll:bg-gray-100 lgg:bg-red-500 mdd:bg-yellow-500 smm:bg-green-600 xs:bg-blue-600
+    }
+
+    .container-header{
+        @apply container w-8/12 mx-auto flex mdd:flex-row smm:flex-col xs:flex-col
+    }
+
+    .header-logo{
+        @apply flex-1 mt-2 mdd:flex-none smm:flex xs:flex smm:justify-center xs:justify-center
+    }
+
+    .menu{
+        @apply flex flex-row mdd:justify-end smm:justify-center xs:justify-center mt-4
+    }
+
+    .menu li{
+        @apply block mr-4 tracking-wider flex-none border-l border-gray-300 pl-1 transition duration-300 transform hover:scale-125
+    }
+
+    .active-menu-item{
+        @apply border-b border-gray-300
+    }
+
+    .solution-container{
+        @apply w-full xll:mt-4 lgg:mt-4 mdd:mt-4 smm:mt-12 xs:mt-14
+    }
+
+    .solution-title{
+        @apply w-8/12 mx-auto text-center mt-5 mb-3
+    }
+
+    .solution-title h2{
+        @apply text-2xl font-bold
+    }
+
+    .solution-body{
+        @apply xll:w-8/12 lgg:w-11/12 mdd:w-11/12 smm:w-full mx-auto flex flex-col smm:flex-row mb-3
+    }
+
+    .solution-body-entry-sol{
+        @apply flex-1 mb-2
+    }
+
+    .solution-div-entry-sol {
+        @apply w-10/12 smm:w-11/12 mx-auto mt-2
+    }
+
+    .solution-div-entry-sol textarea{
+        @apply w-full shadow-md min-h-36 max-h-72 resize-y p-2
+    }
+
+    .solution-div-entry-sol pre{
+        @apply w-full h-auto shadow-md bg-white p-2
+    }
+
+    .solution-div-button{
+        @apply xll:w-5/12 lgg:w-5/12 mdd:w-5/12 smm:w-10/12 xs:w-10/12 mx-auto mt-5
+    }
+
+    .solution-div-button-enabled{
+        @apply w-full bg-blue-400 shadow-md p-2 rounded-md text-white text-lg font-bold hover:bg-blue-600
+    }
+
+    .solution-div-button-disabled{
+        @apply w-full bg-gray-400 shadow-md p-2 rounded-md text-white text-lg font-bold
+    }
+}

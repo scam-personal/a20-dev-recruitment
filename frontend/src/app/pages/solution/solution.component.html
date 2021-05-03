@@ -1,0 +1,32 @@
+<div class="solution-container">
+    <div class="solution-title">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="solution-body">
+        <div class="solution-body-entry-sol">
+            <div class="solution-div-entry-sol">
+                <h4 class="text-lg font-bold">Entry:</h4>
+            </div>
+            <div class="solution-div-entry-sol">
+                <textarea name="{{id}}" id="{{id}}" [(ngModel)]="input"></textarea>
+                <span class="text-center mt-2 text-red-600 font-bold" *ngIf="syntax_error.length > 0">{{syntax_error}}</span>
+            </div>
+            <div class="solution-div-button" *ngIf="input.length > 0;else disabled_button">
+                <button class="solution-div-button-enabled" (click)="send_input()">Send</button>
+            </div>
+            <ng-template #disabled_button>
+                <div class="solution-div-button" [disabled]="true">
+                    <button class="solution-div-button-disabled">Send</button>
+                </div>
+            </ng-template>
+        </div>
+        <div class="solution-body-entry-sol">
+            <div class="solution-div-entry-sol">
+                <h4 class="text-lg font-bold">Results:</h4>
+            </div>
+            <div class="solution-div-entry-sol" style="white-space: pre;">
+                <pre>{{result}}</pre>
+            </div>
+        </div>
+    </div>
+</div>
